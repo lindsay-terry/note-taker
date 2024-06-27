@@ -26,17 +26,14 @@ api.post('/notes', async (req, res) => {
 
             try {
                 const data = await readFile('./db/db.json', 'utf8');
-                const notes = JSON.parse(data);
+                const savedNotes = JSON.parse(data);
                 notes.push(newNote);
 
-                await writeFile('./db/db.json', JSON.stringify(notes, null, 4));
+                await writeFile('./db/db.json', JSON.stringify(savedNotes, null, 4));
                 console.log('Note successfully recorded');
 
-                // await readFile('./db/db.json', 'utf-8');
+                res.status(201).json(savedNotes);
 
-                res.json(api.get('/notes', (req, res) => {
-                    return notes;
-                }));
             } catch (error) {
                 console.log('Error, try again');
             } 
