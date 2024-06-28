@@ -17,11 +17,10 @@ const createNote = async (req, res) => {
         text,
         id: uuidv4()
     };
-    console.log(newNote.id);
+    
     //reads the db file with all stored notes
     try {
         const data = await readFile('./db/db.json', 'utf8');
-        // const savedNotes = JSON.parse(data); //do i need this?
         notes.push(newNote);
 
         //writes db file with updated notes
@@ -35,4 +34,25 @@ const createNote = async (req, res) => {
   }
 }
 
-module.exports = createNote;
+//function to delete note
+const deleteNote = async (req, res) => {
+    const data = await readFile('./db/db.json', 'utf8');
+    const { id } = req.params;
+    
+    //finds index of note
+    const index = notes.findIndex(note => note.id === id);
+
+    //removes index from notes array
+    if (index !== -1) {
+        notes.splice(index, 1);
+        //writes updated db.json file
+        await writeFile('./db/db.json', JSON.stringify(notes, null, 4));
+
+        //sends success message back to client
+        res.status(204).json(notes);
+    } else {
+        res.status(404).json({error: 'No note found'});
+    }
+}
+
+module.exports = { createNote, deleteNote };

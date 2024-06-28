@@ -1,5 +1,5 @@
 const api = require('express').Router();
-const createNote = require('../helpers/readWrite');
+const { createNote, deleteNote } = require('../helpers/readWrite');
 const notes = require('../db/db.json');
 
 //request to retrieve notes from DB
@@ -9,4 +9,7 @@ api.get('/notes', (req, res) => {
 
 //request to post notes to db
 api.post('/notes', createNote);
+
+//delete request to delete a note
+api.delete('/notes/:id', deleteNote);
 module.exports = api;
