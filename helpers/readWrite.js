@@ -2,7 +2,7 @@ const notes = require('../db/db.json');
 
 const fs = require ('fs');
 const util = require('util');
-const uuid = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -15,7 +15,7 @@ const createNote = async (req, res) => {
     const newNote = {
         title,
         text,
-        id: uuid
+        id: uuidv4()
     };
     console.log(newNote.id);
     //reads the db file with all stored notes
