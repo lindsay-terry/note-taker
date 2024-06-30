@@ -1,22 +1,32 @@
 [
     {
-        "title": "los campesino",
-        "text": "s",
-        "id": "86097196-0217-472a-b9b0-42f585edd574"
+        "title": "Register Car",
+        "text": "Take car to get registration done",
+        "id": "ab486b88-c073-4abe-a8b4-7670ba13628e"
     },
     {
-        "title": "another chrose",
-        "text": "do chorse",
-        "id": "7d4efc95-7c1c-4cba-9d8f-63e67ef8bdee"
+        "title": "Car wash",
+        "text": "Take car to car wash",
+        "id": "97ee6edf-b8dd-444b-b15b-d08bd9e80a65"
     },
     {
-        "title": "clean friend house",
-        "text": "watching it",
-        "id": "c800a650-042b-428e-81e7-d47dbddb9d77"
+        "title": "Grocery Shopping",
+        "text": "Get coffee creamer",
+        "id": "c6187c59-06c6-4cb0-beb7-b162084d2b97"
     },
     {
-        "title": "tire on bike",
-        "text": "put tired on bikesd",
-        "id": "a4687bee-8693-437d-8e72-262fa9ad8d85"
+        "title": "Clean house",
+        "text": "Clean the whole house",
+        "id": "77e0d838-2d25-454a-b172-1697b802622b"
+    },
+    {
+        "title": "Feed friend's cats",
+        "text": "Feed the cats",
+        "id": "8c39db55-6ee0-43e6-89e1-63b6322c370c"
+    },
+    {
+        "title": "Go for a walk",
+        "text": "Get exercise",
+        "id": "4c6356e3-8b2a-42e6-a85e-3f15adec6c00"
     }
 ]
