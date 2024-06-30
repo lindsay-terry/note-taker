@@ -20,7 +20,7 @@ Installation instructions for application:
 npm i to install express and uuid
 
 ## Usage
-[Click here]() for deployed application
+[Click here](https://note-taker-z0v0.onrender.com/) for deployed application
 
 ![Screenshot of application](./images/notetaker.png)
 
